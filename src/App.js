@@ -6,6 +6,7 @@ import {Route, Switch, BrowserRouter} from 'react-router-dom';
 import AboutUs from "./containers/AboutUs/AboutUs";
 import Layout from "./Layout";
 import Game from "./containers/Game/Game";
+import MainPage from "./containers/MainPage/MainPage";
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
                 {/* которые зависят от Router и должны быть внутри него. */}
                 <Layout>
                     <Switch>
+                        <Route exact path='/' component={MainPage}/>
                         <Route path="/about" component={AboutUs}/>
                         <Route path="/checkout" component={Checkout}/>
                         <Route path="/game" component={Game}/>
